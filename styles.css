@@ -1,0 +1,111 @@
+/* Загальний стиль сторінки */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+  
+header {
+    margin: 10px;
+    padding: 10px;
+    color: #333;
+    text-align: center;
+}
+  
+header h1 {
+    font-size: 2.3rem;
+    color: #737171bf;
+    font-weight: 50; /* Надтонкий шрифт */
+    font-family: 'Montserrat', sans-serif;
+}
+  
+header h2 {
+    font-size: 2.1rem;
+    color: hsl(234, 12%, 34%);
+}
+  
+header p {
+    font-size: 1rem;
+    color: #aea9a9;
+    margin-top: 40px;
+}
+
+/* Стиль для карток */
+.cards {
+    position: relative;
+    width: 750px; /* Встанови під реальну ширину */
+    margin: 0 auto; /* Центрування */
+    height: 480px; /* Висота контейнера */
+}
+
+.card {
+    position: absolute;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 260px; /* Оновлена ширина */
+    height: 170px; /* Оновлена висота */
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px); /* Піднімає картку на 10px */
+    box-shadow: 0 12px 20px hsla(212, 63%, 37%, 0.674); /* Збільшуємо тінь */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card h3 {
+    font-size: 1.1rem; /* Менший заголовок */
+    color: #605b5b; /* Темно-сірий */
+    font-weight: 800;
+}
+
+.card p {
+    font-size: 0.75rem; /* Зменшений текст */
+    color: #777; /* Сіріший відтінок */
+    line-height: 1.4; /* Трохи більший міжрядковий інтервал для читабельності */
+}
+/* Позиціонування карток */
+.card-supervisor {
+    top: 160px;
+    left: -100px;
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.card-team-builder {
+    top:-20px;
+    left: 240px;
+    border-top: 5px solid #f76262;
+}
+
+.card-calculator {
+    top: 160px;
+    left: 580px;
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+.card-karma {
+    top: 240px;
+    left: 240px;
+    border-top: 5px solid #fbbd04;
+}
+
+/* Вирівнювання SVG */
+.card img {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 50px; /* Опціонально, якщо потрібно зменшити */
+    height: auto;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
